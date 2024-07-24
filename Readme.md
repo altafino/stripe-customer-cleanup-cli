@@ -46,14 +46,6 @@ This Go CLI application deletes all customers from a Stripe account who have not
     go get github.com/joho/godotenv
     ```
 
-4. **Tidy the dependencies**:
-
-    Ensure the dependencies are tidy:
-
-    ```sh
-    go mod tidy
-    ```
-
 ## Usage
 
 1. **Run the CLI**:
