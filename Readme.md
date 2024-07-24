@@ -83,4 +83,4 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 ## Contact
 
-If you have any questions or need further assistance, please contact [your-email@example.com].
+If you have any questions or need further assistance, please contact me at X @gloangch.
