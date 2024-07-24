@@ -1,7 +1,7 @@
 
 # Stripe Customer Cleanup CLI
 
-This Go CLI application deletes all customers from a Stripe account who have not had any successful payments for invoices. 
+This Go CLI application deletes all customers from a Stripe account who have not had any successful payments for invoices.
 
 ## Prerequisites
 
@@ -13,7 +13,7 @@ This Go CLI application deletes all customers from a Stripe account who have not
 1. **Clone the repository**:
 
     ```sh
-    git clone https://github.com/your-repo/stripe-customer-cleanup-cli.git
+    git clone https://github.com/altafino/stripe-customer-cleanup-cli.git
     cd stripe-customer-cleanup-cli
     ```
 
@@ -31,9 +31,24 @@ This Go CLI application deletes all customers from a Stripe account who have not
     STRIPE_API_KEY=sk_test_your_actual_stripe_api_key
     ```
 
-3. **Install dependencies**:
+3. **Initialize the Go module and install dependencies**:
 
-    Run `go mod tidy` to install the necessary dependencies:
+    Initialize the Go module (if not already initialized):
+
+    ```sh
+    go mod init stripe-customer-cleanup-cli
+    ```
+
+    Install the necessary dependencies:
+
+    ```sh
+    go get github.com/stripe/stripe-go/v74
+    go get github.com/joho/godotenv
+    ```
+
+4. **Tidy the dependencies**:
+
+    Ensure the dependencies are tidy:
 
     ```sh
     go mod tidy
@@ -44,7 +59,7 @@ This Go CLI application deletes all customers from a Stripe account who have not
 1. **Run the CLI**:
 
     ```sh
-    go run delete_customers.go
+    go run main.go
     ```
 
     This will delete all customers who have not had any successful payments for invoices. The output will indicate which customers were deleted.
@@ -53,7 +68,7 @@ This Go CLI application deletes all customers from a Stripe account who have not
 
 ```
 /your-project-directory
-    |-- delete_customers.go      # Main Go script
+    |-- main.go                  # Main Go script
     |-- go.mod                   # Go module file
     |-- .env.example             # Example environment variables file
     |-- .env                     # Environment variables file (ignored by version control)
