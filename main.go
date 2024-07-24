@@ -5,12 +5,19 @@ import (
     "log"
     "os"
 
+    "github.com/joho/godotenv"
     "github.com/stripe/stripe-go/v74"
     "github.com/stripe/stripe-go/v74/customer"
     "github.com/stripe/stripe-go/v74/invoice"
 )
 
 func main() {
+    // Load environment variables from .env file
+    err := godotenv.Load()
+    if err != nil {
+        log.Fatal("Error loading .env file")
+    }
+
     // Ensure the Stripe API key is provided as an environment variable
     apiKey := os.Getenv("STRIPE_API_KEY")
     if apiKey == "" {
