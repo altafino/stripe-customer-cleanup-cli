@@ -1,3 +1,4 @@
+
 # Stripe Customer Cleanup CLI
 
 This Go CLI application deletes all customers from a Stripe account who have not had any successful payments for invoices. 
@@ -50,3 +51,36 @@ This Go CLI application deletes all customers from a Stripe account who have not
 
 ## Project Structure
 
+```
+/your-project-directory
+    |-- delete_customers.go      # Main Go script
+    |-- go.mod                   # Go module file
+    |-- .env.example             # Example environment variables file
+    |-- .env                     # Environment variables file (ignored by version control)
+    |-- README.md                # This README file
+```
+
+## Environment Variables
+
+The application requires the following environment variables:
+
+- `STRIPE_API_KEY`: Your Stripe API key. You can obtain it from the Stripe Dashboard.
+
+## Dependencies
+
+This project uses the following Go packages:
+
+- [Stripe Go](https://github.com/stripe/stripe-go)
+- [Godotenv](https://github.com/joho/godotenv)
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## Contact
+
+If you have any questions or need further assistance, please contact [your-email@example.com].
